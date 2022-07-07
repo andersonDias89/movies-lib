@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App'
+import Home from './pages/Home'
+import Movie from './pages/Movie'
+import Search from './pages/Search'
 import './styles/main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
