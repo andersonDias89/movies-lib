@@ -5,11 +5,11 @@ const imageUrl = import.meta.env.VITE_IMG
 
 export function MovieCard({ movie, showLink = true }) {
     return (
-        <div className="p-2 bg-gray-700 w-72 mt-5">
+        <div className="p-2 bg-gray-700">
             <div className="w-full">
                 <img src={imageUrl + movie.poster_path} alt={movie.title} />
                 <div className="flex justify-between py-2">
-                    <h2>{movie.title}</h2>
+                    <h2 className="font-extrabold">{movie.title}</h2>
                     <p className="flex items-center space-x-1">
                         <span><FaStar /></span> 
                         <span>{movie.vote_average}</span>
