@@ -8,6 +8,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.degrade {
+background: linear-gradient(to bottom, #000000, #121214);
+}
+
 .container {
     max-width: 90%;
     margin: 0 auto;

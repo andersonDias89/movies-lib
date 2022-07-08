@@ -23,8 +23,8 @@ function Home() {
   }, [])
 
   return (
-    <div className="w-full">
-      <div className="container">
+    <div className="w-full my-6">
+      <div className="container grid grid-cols-3 gap-4">
         {topMovies.length > 0 &&
           topMovies.map(movie => {
             return (
