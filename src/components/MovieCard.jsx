@@ -11,7 +11,7 @@ export function MovieCard({ movie, showLink = true }) {
                 <div className="flex justify-between py-2">
                     <h2 className="font-extrabold">{movie.title}</h2>
                     <p className="flex items-center space-x-1">
-                        <span><FaStar /></span> 
+                        <span className="text-yellow-400"><FaStar /></span> 
                         <span>{movie.vote_average}</span>
                     </p>
                 </div>
