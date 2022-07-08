@@ -13,13 +13,11 @@ function Home() {
     const data = await response.json()
 
     setTopMovies(data.results)
-    console.log(topMovies)
   }
 
   useEffect(() => {
     const topRatedUrl = `${movieUrl}top_rated?${apiKey}`
 
-    console.log(topRatedUrl)
     getTopRatedMovies(topRatedUrl)
 
   }, [])
@@ -30,7 +28,7 @@ function Home() {
         {topMovies.length > 0 &&
           topMovies.map(movie => {
             return (
-              <MovieCard movie={movie} />
+              <MovieCard key={movie.id} movie={movie} />
             )
           })}
       </div>
