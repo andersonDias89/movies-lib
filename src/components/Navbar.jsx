@@ -1,21 +1,11 @@
-import { Link } from "react-router-dom";
-
-import { BiCameraMovie } from 'react-icons/bi'
 import { BsSearch } from 'react-icons/bs'
+import { Logo } from "./Logo";
 
 export function Navbar() {
     return (
         <div className="w-full h-20 degrade flex items-center">
             <div className="container flex items-center justify-between">
-                <div className="flex space-x-1 items-center justify-center">
-                    <div className="text-xl">
-                        <BiCameraMovie />
-                    </div>
-                    <Link to="/">
-                        <h1 className="text-xl">MovieLab</h1>
-                    </Link>
-                </div>
-
+                <Logo />
                 <form className="w-[35%]">
                     <div className="flex bg-transparent border border-card p-2 rounded-md">
                         <input
