@@ -5,7 +5,7 @@ const imageUrl = import.meta.env.VITE_IMG
 
 export function MovieCard({ movie, showLink = true }) {
     return (
-        <div className="p-2 bg-gray-700">
+        <div className="p-3 bg-card">
             <div className="w-full">
                 <img src={imageUrl + movie.poster_path} alt={movie.title} />
                 <div className="flex justify-between py-2">
@@ -17,7 +17,7 @@ export function MovieCard({ movie, showLink = true }) {
                 </div>
                 <div className="w-full">
                     {showLink && <Link to={`/movie/${movie.id}`}>
-                        <button type="button" className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Detalhes</button>
+                        <button type="button" className="bg-primary w-full text-white font-bold py-2 px-4 rounded">Detalhes</button>
                     </Link>}
                 </div>
             </div>
