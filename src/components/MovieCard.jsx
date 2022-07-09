@@ -3,9 +3,9 @@ import { FaStar } from 'react-icons/fa'
 
 const imageUrl = import.meta.env.VITE_IMG
 
-export function MovieCard({ movie, showLink = true }) {
+export function MovieCard({ movie, showLink = true, size}) {
     return (
-        <article className="p-3 bg-card shadow-lg flex flex-col justify-between">
+        <article className={`p-3 bg-card w-[${size}] shadow-lg flex flex-col justify-between`}>
             <div className="w-full ">
                 <img src={imageUrl + movie.poster_path} alt={movie.title} />
 
