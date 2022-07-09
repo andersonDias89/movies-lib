@@ -19,7 +19,7 @@ export function Navbar() {
     }
 
     return (
-        <div className="w-full h-20 degrade flex items-center">
+        <header className="w-full h-20 degrade flex items-center">
             <div className="container flex items-center justify-between">
                 <Logo />
                 <form
@@ -30,7 +30,7 @@ export function Navbar() {
                         <input
                             onChange={e => setSearch(e.target.value)}
                             value={search}
-                            type="text"
+                            type="search"
                             placeholder='Search'
                             className=" bg-transparent placeholder:text-slate-500 border-none formSearch w-20 text-white outline-none"
                         />
@@ -40,6 +40,6 @@ export function Navbar() {
                     </div>
                 </form>
             </div>
-        </div>
+        </header>
     )
 }
