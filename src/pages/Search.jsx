@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
-import {MovieCard} from '../components/MovieCard'
+import { MovieCard } from '../components/MovieCard'
 
 const serachUrl = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
@@ -16,7 +16,6 @@ function Search() {
     const response = await fetch(url)
     const data = await response.json()
     setMovies(data.results)
-    console.log(movies) 
   }
 
   useEffect(() => {
@@ -25,8 +24,11 @@ function Search() {
     getSeachedMovies(searchWithQueryUrl)
   }, [query])
 
-    return (
-      <div className="w-full my-6">
+  return (
+    <div className="w-full my-6">
+      <h1 className="text-center my-4 text-xl">Resultado para a busca:
+        <span className="text-primary font-extrabold"> {query}</span>
+      </h1>
       <div className="container grid grid-cols-3 gap-12">
         {movies.length > 0 &&
           movies.map(movie => {
@@ -36,7 +38,7 @@ function Search() {
           })}
       </div>
     </div>
-    )
-  }
+  )
+}
 
-  export default Search
+export default Search
