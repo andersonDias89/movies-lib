@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { MovieCard } from "../components/MovieCard"
+import { GiReceiveMoney } from 'react-icons/gi'
+import { BiTime } from 'react-icons/bi'
+import { FaDesktop } from 'react-icons/fa'
+import { MdLeaderboard } from 'react-icons/md'
 
 const moviesUrl = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
@@ -42,17 +46,41 @@ function Movie() {
             <div className="p-5 flex-1">
               <h1 className="text-3xl text-primary font-extrabold">{movie.title}</h1>
               <p className="font-light">{movie.tagline}</p>
-              <div className="flex items-center justify-start gap-2">
-                <span>
-                  {movie.genres.map((genre) => genre.name).join(", ")}
-                </span>
-                <span>Receita: {formatCurrence(movie.budget)}</span>
-                <span>Faturamento: {formatCurrence(movie.revenue)}</span>
-                <span>{`${movie.runtime}min`}</span>
+
+              <div className="flex items-center justify-start gap-5 text-sm mt-4">
+                <div className="flex items-center gap-1">
+                  <span className="text-primary text-lg"><FaDesktop /></span>
+                  <span>{movie.genres.map((genre) => genre.name).join(", ")}</span>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <span className="text-primary text-lg"><BiTime /></span>
+                  <span>{`${movie.runtime}min`}</span>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <span className="text-primary text-lg"><GiReceiveMoney /></span>
+                  <span>Receita: {formatCurrence(movie.revenue)}</span>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <span className="text-primary text-lg"><MdLeaderboard /></span>
+                  <span>Faturamento: {formatCurrence(movie.budget)}</span>
+                </div>
+
               </div>
-              <p className="mt-5">
+
+              <p className="mt-5 font-light">
                 {movie.overview}
               </p>
+              <div className="mt-5">
+                <h2 className="text-primary font-bold">Production Company:</h2>
+                <div className="flex gap-5">
+                  {movie.production_companies.map(company => {
+                    return <p key={company.id}>{company.name}</p>
+                  })}
+                </div>
+              </div>
 
 
 
