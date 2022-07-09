@@ -21,3 +21,18 @@ width: 300px;
     max-width: 90%;
     margin: 0 auto;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+    background: #1e1e2d;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+    background: #8257E6;
+  }

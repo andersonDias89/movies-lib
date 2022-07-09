@@ -23,8 +23,8 @@ function Home() {
   }, [])
 
   return (
-    <div className="w-full my-6">
-      <div className="container grid grid-cols-3 gap-4">
+    <main className="w-full my-6">
+      <div className="container grid grid-cols-3 gap-12">
         {topMovies.length > 0 &&
           topMovies.map(movie => {
             return (
@@ -32,7 +32,7 @@ function Home() {
             )
           })}
       </div>
-    </div>
+    </main>
   )
 }
 
