@@ -6,12 +6,12 @@ export function Navbar() {
         <div className="w-full h-20 degrade flex items-center">
             <div className="container flex items-center justify-between">
                 <Logo />
-                <form className="w-[35%]">
-                    <div className="flex bg-transparent border border-card p-2 rounded-md">
+                <form className="flex justify-end">
+                    <div className="flex bg-transparent border border-card p-2 rounded-md justify-between">
                         <input
                             type="text"
-                            placeholder="What are you looking for?"
-                            className="w-full bg-transparent placeholder:text-slate-500 border-none text-white outline-none"
+                            placeholder='Search'
+                            className=" bg-transparent placeholder:text-slate-500 border-none formSearch w-20 text-white outline-none"
                         />
                         <button type="submit">
                             <BsSearch />
