@@ -60,12 +60,12 @@ function Movie() {
 
                 <div className="flex items-center gap-1">
                   <span className="text-primary text-lg"><GiReceiveMoney /></span>
-                  <span>Receita: {formatCurrence(movie.revenue)}</span>
+                  <span>Revenue: {formatCurrence(movie.revenue > "0.00" ? movie.revenue : "Uninformed")}</span>
                 </div>
 
                 <div className="flex items-center gap-1">
                   <span className="text-primary text-lg"><MdLeaderboard /></span>
-                  <span>Faturamento: {formatCurrence(movie.budget)}</span>
+                  <span>Invoicing: {formatCurrence(movie.budget > "0.00" ? movie.budget : "Uninformed")}</span>
                 </div>
 
               </div>
