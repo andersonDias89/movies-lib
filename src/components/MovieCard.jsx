@@ -17,7 +17,7 @@ export function MovieCard({ movie, showLink = true }) {
                 </div>
                 <div className="w-full">
                     {showLink && <Link to={`/movie/${movie.id}`}>
-                        <button type="button" className="bg-primary w-full text-white font-bold py-2 px-4 rounded">Detalhes</button>
+                        <button type="button" className="bg-primary hover:bg-[#341e64] transition-colors w-full text-white font-bold py-2 px-4 rounded">Detalhes</button>
                     </Link>}
                 </div>
             </div>
