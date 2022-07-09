@@ -25,7 +25,7 @@ function Search() {
   }, [query])
 
   return (
-    <div className="w-full my-6">
+    <main className="w-full my-6">
       <h1 className="text-center my-4 text-xl">Resultado para a busca:
         <span className="text-primary font-extrabold"> {query}</span>
       </h1>
@@ -37,7 +37,7 @@ function Search() {
             )
           })}
       </div>
-    </div>
+    </main>
   )
 }
 
