@@ -4,7 +4,7 @@ import { BiCameraMovie } from 'react-icons/bi'
 
 export function Logo() {
     return (
-        <div className="flex items-start justify-center border border-primary overflow-hidden rounded-md h-10">
+        <div className="flex items-start justify-center border lg:hidden border-primary overflow-hidden rounded-md h-10">
             <div className="text-3xl h-full flex items-center p-1 bg-primary text-white">
                 <BiCameraMovie />
             </div>
