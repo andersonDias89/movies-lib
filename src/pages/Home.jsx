@@ -24,11 +24,11 @@ function Home() {
 
   return (
     <main className="w-full my-6">
-      <div className="container grid grid-cols-3 gap-12">
+      <div className="container grid grid-cols-3 md:flex md:flex-wrap md:grid-cols-none md:w-[380px] gap-12">
         {topMovies.length > 0 &&
           topMovies.map(movie => {
             return (
-              <MovieCard key={movie.id} movie={movie} />
+              <MovieCard size="380px" key={movie.id} movie={movie} />
             )
           })}
       </div>
