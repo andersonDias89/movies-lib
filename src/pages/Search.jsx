@@ -29,7 +29,7 @@ function Search() {
       <h1 className="text-center my-4 text-xl">Resultado para a busca:
         <span className="text-primary font-extrabold"> {query}</span>
       </h1>
-      <div className="container grid grid-cols-3 gap-12">
+      <div className="container grid grid-cols-3 md:flex md:flex-wrap md:grid-cols-none md:w-[380px] gap-12">
         {movies.length > 0 &&
           movies.map(movie => {
             return (

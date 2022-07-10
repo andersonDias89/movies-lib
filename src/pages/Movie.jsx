@@ -37,17 +37,17 @@ function Movie() {
 
   return (
     <main className="w-full my-6">
-      <div className="container flex">
+      <div className="container flex lg:flex-col lg:w-[380px] lg:items-center">
         {movie && (
           <>
 
-            <MovieCard size={'300px'} movie={movie} showLink={false} />
+            <MovieCard movie={movie} showLink={false} />
 
-            <div className="p-5 flex-1">
+            <div className="p-5 flex-1 lg:flex-0 lg:flex lg:flex-col">
               <h1 className="text-3xl text-primary font-extrabold">{movie.title}</h1>
               <p className="font-light">{movie.tagline}</p>
 
-              <div className="flex items-center justify-start gap-5 text-sm mt-4">
+              <div className="flex items-center justify-start gap-5 text-sm mt-4 lg:flex-col">
                 <div className="flex items-center gap-1">
                   <span className="text-primary text-lg"><FaDesktop /></span>
                   <span>{movie.genres.map((genre) => genre.name).join(", ")}</span>
