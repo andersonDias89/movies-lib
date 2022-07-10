@@ -19,14 +19,14 @@ export function Navbar() {
     }
 
     return (
-        <header className="w-full h-20 degrade flex items-center">
-            <div className="container flex items-center justify-between">
+        <header className="w-full h-20 degrade  flex items-center">
+            <div className="container flex items-center justify-between lg:justify-end">
                 <Logo />
                 <form
                     onSubmit={handleSearch}
                     className="flex justify-end"
                 >
-                    <div className="flex bg-transparent border border-card p-2 rounded-md justify-between">
+                    <div className="flex bg-transparent border  border-card p-2 rounded-md justify-between">
                         <input
                             onChange={e => setSearch(e.target.value)}
                             value={search}
